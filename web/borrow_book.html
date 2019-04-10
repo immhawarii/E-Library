@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Borrow Book</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand font-weight-bold text-white" href="dashboard_e.html">
+            <img src="img/logo_company.jpg" width="40px" height="40px" alt="">
+            Company
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="list_of_book.html">List of book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white">|</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span id="memberName"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href='javascript:;' onclick='logout();'>Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End of header -->
+
+    <!-- Content -->
+    <!-- requester information -->
+    <form action="">
+        <div class="container p-0 mt-5 pt-2 bg-white rounded">
+            <div class="d-flex col-sm mt-3 bg-secondary text-white">
+                <h3 class="mb-0 mt-3 pb-3 ml-3 align-middle">Book Checkout Form</h3>
+            </div>
+
+            <div class="container d-flex flex-row flex-wrap pr-4 text-nowrap p-0 pb-3 bg-white shadow-lg rounded">
+                <div class="input-group d-flex justify-content-between col-6 mt-3">
+                    <div class="input-group-prepend mr-auto col-5">
+                        <label for="staticName" class="col col-form-label">Requester Name</label>
+                    </div>
+
+                    <input type="text" id="requesterName" readonly class="form-control col-7" placeholder="" required>
+                </div>
+                <div class="input-group d-flex justify-content-between col-6 mt-3">
+                    <div class="input-group-prepend mr-auto col-5">
+                        <label for="staticPayroll" class="col col-form-label">Payroll Number</label>
+                    </div>
+
+                    <input type="number" id="payroll" readonly class="form-control col-7" placeholder="" required>
+                </div>
+
+
+                <div class="input-group d-flex justify-content-between col-6 mt-3">
+                    <div class="input-group-prepend mr-auto col-5">
+                        <label for="exampleFormControlSelect1" class="col col-form-label">Requester Position</label>
+                    </div>
+
+                    <select type="text" id="position" class="form-control col-7" placeholder="" required>
+                        <option>Full Stack Developer</option>
+                        <option>Quality Assurance</option>
+                        <option>Finance</option>
+                        <option>Database Support</option>
+                        <option>Front End Developer</option>
+                    </select>
+                </div>
+                <div class="input-group d-flex justify-content-between col-6 mt-3">
+                    <div class="input-group-prepend mr-auto col-5">
+                        <label for="processID" class="col col-form-label">Process ID</label>
+                    </div>
+
+                    <input type="text" id="processID" readonly class="form-control col-7" placeholder="" required>
+                </div>
+                <div class="input-group d-flex justify-content-between col-6 mt-3">
+                    <div class="input-group-prepend mr-auto col-5">
+                        <label for="prNumber" class="col col-form-label">BPM PR Number</label>
+                    </div>
+
+                    <input type="number" id="pr_number" readonly class="form-control col-7" placeholder="" required>
+                </div>
+                <div class="input-group d-flex justify-content-between col-6 mt-3">
+                    <div class="input-group-prepend mr-auto col-5">
+                        <label for="plant" class="col col-form-label">Plant</label>
+                    </div>
+
+                    <input type="text" id="plant" readonly class="form-control col-7" placeholder="" required>
+                </div>
+                <div class="input-group d-flex justify-content-between col-6 mt-3">
+                    <div class="input-group-prepend mr-auto col-5">
+                        <label for="exampleFormControlSelect1" class="col col-form-label">Storage Location</label>
+                    </div>
+
+                    <select type="text" id="storageLocation" class="form-control col-7" placeholder="" required>
+                        <option>Bandung Cidadap</option>
+                        <option>Bandung Banjaran</option>
+                        <option>Jakarta Kuningan</option>
+                        <option>Bandung Cicaheum</option>
+                        <option>Bandung Dago</option>
+                    </select>
+                </div>
+                <div class="input-group d-flex justify-content-between col-6 mt-3">
+                    <div class="input-group-prepend mr-auto col-5">
+                        <label for="staticCurrency" class="col col-form-label">Currency</label>
+                    </div>
+
+                    <input type="text" id="currency" readonly class="form-control col-7" placeholder="" required>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="mt-4 text-center fixed-bottom text-white py-3 bg-primary p-0 m-0">© 2018 Copyright:
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/pr_create.js"></script>
+
+    <script>
+        printName('name')
+        fillForm()
+        getItems()
+    </script>
+</body>
+
+</html>
